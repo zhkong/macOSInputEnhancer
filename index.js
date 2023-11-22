@@ -1,3 +1,11 @@
+/*
+ * @Author: zhkong
+ * @Date: 2023-11-23 00:03:35
+ * @LastEditors: zhkong
+ * @LastEditTime: 2023-11-23 00:09:37
+ * @FilePath: /macOSInputEnhancer/index.js
+ * @Description: Do not edit
+ */
 import Parser from './parser.js'
 import loaders from './loaders/index.js'
 import plugins from './plugins/index.js'
@@ -36,7 +44,7 @@ const config = {
   // 如 `我家`
   //    用小鹤转换器则会转换为 `wojx`
   //    用拼音转换器则会转换为 `wojia`
-  transformer: transformers.XiaoheTransformer(),
+  transformer: transformers.PinYinTransformer(),
   adapter: adapters.macOSRender(), // 适配器，将结果输出为对应平台支持的字库格式
   output: './output/macOS_input_dic.plist', // 文件保存目录
   log: true, // 是否打印日志
